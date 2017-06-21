@@ -3,4 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!-- 配置servlet的名字 -->
+    <servlet>
+        <servlet-name>firstServlet</servlet-name>
+        <servlet-class>servlet.FirstServlet</servlet-class>
+        <!--<load-on-startup>0</load-on-startup>-->
+        <!-- 配置初始化参数 -->
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>huashuran</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pass</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+    </servlet>
+    <!-- 配置servlet的URL -->
+    <servlet-mapping>
+        <servlet-name>firstServlet</servlet-name>
+        <url-pattern>/first-servlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
