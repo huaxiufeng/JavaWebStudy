@@ -24,10 +24,49 @@
     <tlib-version>1.0</tlib-version>
     <short-name>SimpleTagLibrary</short-name>
     <uri>http://javawebstudy.xiufeng.org/mytaglib</uri>
+
+    <!-- 第一个tag：简单tag，自定义标签生成动态内容 -->
     <tag>
         <description>Outputs Hello, World</description>
         <name>helloWorld</name>
         <tag-class>taglib.HelloWorldTag</tag-class>
         <body-content>empty</body-content>
+    </tag>
+
+    <!-- 第二个tag：带属性的tag -->
+    <tag>
+        <!-- 定义标签名 -->
+        <name>query</name>
+        <!-- 定义标签处理类 -->
+        <tag-class>taglib.QueryTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>user</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
+        <attribute>
+            <name>pass</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
+    </tag>
+
+    <!-- 第三个tag: 带标签体的标签 -->
+    <tag>
+        <name>iterator</name>
+        <tag-class>taglib.IteratorTag</tag-class>
+        <!-- 定义标签题不允许出现jsp脚本 -->
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>collection</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
+        <attribute>
+            <name>item</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
     </tag>
 </taglib>
