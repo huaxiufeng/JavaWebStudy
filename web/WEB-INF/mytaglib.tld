@@ -69,4 +69,24 @@
             <fragment>true</fragment>
         </attribute>
     </tag>
+
+    <!-- 第四个tag: 以页面片段为属性的标签 -->
+    <tag>
+        <name>fragment</name>
+        <tag-class>taglib.FragmentTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>fragment</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
+    </tag>
+
+    <!-- 第五个tag：动态属性的标签 -->
+    <tag>
+        <name>dynaAttr</name>
+        <tag-class>taglib.DynaAttributesTag</tag-class>
+        <body-content>empty</body-content>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
 </taglib>
